@@ -42,4 +42,4 @@ Uso educacional e demonstração.
 
 
 ## Disponível em:
-mamtematica360.com.br
+https://matematica360.com.br/pdv/
