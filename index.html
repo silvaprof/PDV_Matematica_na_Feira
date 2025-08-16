@@ -1,35 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDV - Mercadinho do Almirante</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PDV - Mercadinho do Almirante</title>
+  <link rel="stylesheet" href="assets/css/pdv.css">
 </head>
 <body>
-    <div class="container">
-        <img src="assets/logo.jpg" alt="Mercadinho do Almirante" class="logo">
-        <h1>Escolha o produto:</h1>
-        <form id="pdv-form">
-            <label>
-                <input type="radio" name="produto" value="Banana" data-preco="8.5"> Banana R$8,50/kg
-            </label><br>
-            <label>
-                <input type="radio" name="produto" value="Maca" data-preco="15"> Maçã R$15,00/kg
-            </label><br>
-            <label>
-                <input type="radio" name="produto" value="Laranja" data-preco="7"> Laranja R$7,00/kg
-            </label><br>
-            <label>Peso (kg): <input type="number" id="peso" min="0" step="0.01"></label><br>
-            <button type="button" onclick="adicionarPedido()">Adicionar ao Pedido</button>
-        </form>
-        <h2>Pedido</h2>
-        <ul id="pedido-lista"></ul>
-        <div id="total"></div>
-        <label>Valor pago pelo cliente (R$): <input type="number" id="valor-pago" min="0" step="0.01"></label><br>
-        <button onclick="finalizarVenda()">Finalizar Venda</button>
-        <div id="resultado"></div>
-    </div>
-    <script src="script.js"></script>
+
+   <div class="logo">
+    <img src="assets/images/logo.jpg" alt="Mercadinho do Almirante" />
+   </div>
+
+  <label>Escolha o produto:</label>
+  <div id="produtos">
+    <div class="btn-produto" data-produto="Banana" data-preco="8.50">Banana<br>R$8,50/kg</div>
+    <div class="btn-produto" data-produto="Maçã" data-preco="15.00">Maçã<br>R$15,00/kg</div>
+    <div class="btn-produto" data-produto="Laranja" data-preco="7.00">Laranja<br>R$7,00/kg</div>
+  </div>
+
+  <label for="peso">Peso (kg):</label>
+  <input type="number" id="peso" step="0.01" min="0.01" placeholder="Ex: 1.25" />
+
+  <button id="adicionar">Adicionar ao Pedido</button>
+
+  <table id="tabelaPedido" style="display:none;">
+    <thead>
+      <tr>
+        <th>Produto</th>
+        <th>Preço/kg (R$)</th>
+        <th>Peso (kg)</th>
+        <th>Subtotal (R$)</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody id="corpoTabela"></tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3">Total</td>
+        <td id="totalPedido">R$ 0,00</td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <label for="valorPago" style="margin-top: 25px;">Valor pago pelo cliente (R$):</label>
+  <input type="number" id="valorPago" step="0.01" min="0" placeholder="Ex: 20.00" />
+
+  <button id="finalizar">Finalizar Venda</button>
+
+
+  <script src="assets/js/pdv.js"></script>
+
 </body>
 </html>

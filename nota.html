@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nota Fiscal - Mercadinho do Almirante</title>
+  <link rel="stylesheet" href="assets/css/nota.css">
+</head>
+<body>
+
+  <div class="header">
+    <h2>Mercadinho do Almirante</h2>
+    <div>CNPJ: 11.111.111/1111-11</div>
+    <div>Rua das Flores, 123 - Cidade - Estado</div>
+    <div>Telefone: (21) 99999-9999</div>
+  </div>
+
+  <h3>Nota Fiscal</h3>
+
+  <table id="tabelaProdutos">
+    <thead>
+      <tr>
+        <th>Produto</th>
+        <th>Qtd (kg)</th>
+        <th>Preço/kg</th>
+        <th>Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Itens vão aqui via JS -->
+    </tbody>
+  </table>
+
+  <div class="total" id="total"></div>
+  <div class="total" id="valorPago"></div>
+  <div class="total" id="troco"></div>
+
+  <button>Voltar</button>
+  <script src="assets/js/nota.js"></script>
+
+</body>
+</html>
