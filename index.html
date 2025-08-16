@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDV - Mercadinho do Almirante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="assets/logo.jpg" alt="Mercadinho do Almirante" class="logo">
+        <h1>Escolha o produto:</h1>
+        <form id="pdv-form">
+            <label>
+                <input type="radio" name="produto" value="Banana" data-preco="8.5"> Banana R$8,50/kg
+            </label><br>
+            <label>
+                <input type="radio" name="produto" value="Maca" data-preco="15"> Maçã R$15,00/kg
+            </label><br>
+            <label>
+                <input type="radio" name="produto" value="Laranja" data-preco="7"> Laranja R$7,00/kg
+            </label><br>
+            <label>Peso (kg): <input type="number" id="peso" min="0" step="0.01"></label><br>
+            <button type="button" onclick="adicionarPedido()">Adicionar ao Pedido</button>
+        </form>
+        <h2>Pedido</h2>
+        <ul id="pedido-lista"></ul>
+        <div id="total"></div>
+        <label>Valor pago pelo cliente (R$): <input type="number" id="valor-pago" min="0" step="0.01"></label><br>
+        <button onclick="finalizarVenda()">Finalizar Venda</button>
+        <div id="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
